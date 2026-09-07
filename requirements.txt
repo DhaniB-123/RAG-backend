@@ -8,3 +8,4 @@ fastapi
 groq
 numpy
 uvicorn
+requests
