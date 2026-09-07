@@ -1,5 +1,4 @@
 pgvector
-sentence-transformers
 alembic
 sqlalchemy
 python-dotenv
