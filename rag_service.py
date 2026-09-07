@@ -1,5 +1,5 @@
 from models import DocumentChunk
-from embeddings import get_embedding
+from embeddings import get_embeddings
 from chunking import chunk_text
 from sqlalchemy.orm import Session
 from groq import Groq
