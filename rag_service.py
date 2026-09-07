@@ -27,7 +27,7 @@ Rules:
 def store_documents(text : str,db : Session,source : str = None):
     chunks = chunk_text(text)
     for chunk in chunks:
-        embeddings = get_embedding(chunk)
+        embeddings = get_embeddings(chunk)
         doc_chunk = DocumentChunk(content = chunk,embedding = embeddings,source = source)
         db.add(doc_chunk)
     db.commit()
