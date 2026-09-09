@@ -8,6 +8,6 @@ class DocumentChunk(base):
     
     id = Column(BigInteger, primary_key=True, autoincrement=True)
     content = Column(Text)
-    embedding = Column(Vector(384))
+    embedding = Column(Vector(764))
     source  = Column(Text,nullable=True)
 
