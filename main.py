@@ -7,8 +7,11 @@ from fastapi import UploadFile,File
 from pdf_extractor import extract_text_from_pdf
 import shutil
 from fastapi.middleware.cors import CORSMiddleware 
+from database import engine,base
 import os
+import models
 
+base.metadata.create_all(bind=engine)
 
 class AskQuery(BaseModel):
     query : str
