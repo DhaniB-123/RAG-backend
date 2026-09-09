@@ -33,7 +33,7 @@ def store_documents(text : str,db : Session,source : str = None):
     db.commit()
 
 def retrieve_chunks(query : str, db : Session,top_k : int = 3,source : str = None):
-    query_embeddings = get_embedding(query)
+    query_embeddings = get_embeddings(query)
     db_query = db.query(DocumentChunk)
     if source:
         db_query = db_query.filter(DocumentChunk.source == source)
